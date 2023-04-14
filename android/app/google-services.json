@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "222549908828",
+    "project_id": "swc-challenge",
+    "storage_bucket": "swc-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222549908828:android:ea50af74ff0ca8dc137599",
+        "android_client_info": {
+          "package_name": "com.example.swc_challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "222549908828-b1ojk7b3n8meurrcqra3ir2hq3d823uo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Q69xVWEGqeZDdEfkQmqcwbYkCdBo-8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "222549908828-b1ojk7b3n8meurrcqra3ir2hq3d823uo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
