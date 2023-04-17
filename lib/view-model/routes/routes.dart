@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:swc_challenge/view/grill_rent/grill_rent_details_screen.dart';
 import 'package:swc_challenge/view/grill_rent/grill_rent_screen.dart';
 
 import '../../view/splash_screen.dart';
@@ -10,7 +9,6 @@ class Routes {
     return {
       NamedRoutes.splash: (context) => const Splash(),
       NamedRoutes.grill: (context) => const GrillRent(),
-      NamedRoutes.grillDetails: (context) => const GrillRentDetails(),
     };
   }
 }
