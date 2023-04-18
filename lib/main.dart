@@ -1,22 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import 'view-model/providers/grills_info.dart';
 import 'view-model/routes/named_routes.dart';
 import 'view-model/routes/routes.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => GrillsInfo()),
-      ],
-      child: const SwcChallenge(),
-    ),
-  );
+  runApp(const SwcChallenge());
 }
 
 class SwcChallenge extends StatelessWidget {
