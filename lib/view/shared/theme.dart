@@ -19,5 +19,9 @@ class AppTheme {
             fontSize: 15,
           ),
         ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF11159A),
+          centerTitle: true,
+        ),
       );
 }
