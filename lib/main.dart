@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:swc_challenge/view/shared/theme.dart';
 
 import 'view-model/routes/named_routes.dart';
 import 'view-model/routes/routes.dart';
@@ -16,27 +17,8 @@ class SwcChallenge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: NamedRoutes.splash,
-      routes: Routes.all(context),
-      theme: ThemeData(
-        splashColor: const Color(0xFFFFFFFF),
-        primaryColor: const Color(0xFF11159A),
-        highlightColor: const Color(0xFFFFBE00),
-        primaryTextTheme: const TextTheme(
-          bodyLarge: TextStyle(
-            color: Color(0xFF11159A),
-            fontSize: 40,
-          ),
-          bodyMedium: TextStyle(
-            color: Color(0xFFFFFFFF),
-            fontSize: 25,
-          ),
-          bodySmall: TextStyle(
-            color: Color(0xFF11159A),
-            fontSize: 20,
-          ),
-        ),
-      ),
-    );
+        initialRoute: NamedRoutes.splash,
+        routes: Routes.all(context),
+        theme: AppTheme.defaultTheme);
   }
 }
