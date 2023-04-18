@@ -1,12 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:swc_challenge/view/shared/theme.dart';
-=======
 import 'package:provider/provider.dart';
->>>>>>> parent of 327186d (refactor: remove unused MultiProvider)
+import 'package:swc_challenge/view-model/providers/calendar_view_model.dart';
+import 'package:swc_challenge/view-model/providers/grills_rent_view_model.dart';
 
-import 'view-model/providers/grills_info.dart';
+import 'view/shared/theme.dart';
+
 import 'view-model/routes/named_routes.dart';
 import 'view-model/routes/routes.dart';
 
@@ -16,7 +15,12 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => GrillsInfo()),
+        ChangeNotifierProvider(
+          create: (_) => GrillRentViewModel(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => CalendarViewModel(),
+        ),
       ],
       child: const SwcChallenge(),
     ),
