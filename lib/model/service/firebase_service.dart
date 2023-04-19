@@ -16,4 +16,15 @@ class FirebaseService {
         .collection('dates')
         .add({'date': date});
   }
+
+  static Future<QuerySnapshot<Map<String, dynamic>>> getDocumentCollectionData(
+      String collection, String doc, String? date) async {
+    final data = await instance
+        .collection(collection)
+        .doc(doc)
+        .collection('dates')
+        .where('date', isEqualTo: date)
+        .get();
+    return data;
+  }
 }
