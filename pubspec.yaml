@@ -36,6 +36,7 @@ dependencies:
   firebase_core:
   cloud_firestore:
   firebase_storage:
+  shared_preferences:
   table_calendar: 
   cupertino_icons: ^1.0.2
 
