@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swc_challenge/model/grills.dart';
+import 'package:swc_challenge/view-model/routes/args/calendar_args.dart';
+import 'package:swc_challenge/view/calendar/calendar.dart';
 
 import '../../../view-model/routes/named_routes.dart';
 
@@ -58,6 +60,7 @@ class CustomBottomSheet extends StatelessWidget {
                   Navigator.pushNamed(
                     context,
                     NamedRoutes.calendar,
+                    arguments: CalendarArgs(grillsModel: grillsModel),
                   );
                 },
                 child: Text(
