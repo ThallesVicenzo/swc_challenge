@@ -26,12 +26,8 @@ class FirebaseRepository {
   //   return dates;
   // }
 
-  static Future<QuerySnapshot<Map<String, dynamic>>> getDocumentByField(
-      String fieldName, dynamic fieldValue, String collection) async {
-    final QuerySnapshot<Map<String, dynamic>> snapshot =
-        await _collectionReference
-            .where(fieldName, isEqualTo: fieldValue)
-            .get();
-    return snapshot;
+  static Future<void> setDocumentCollectionData(
+      String collection, String doc, String? date) async {
+    await FirebaseService.setDocumentCollectionData(collection, doc, date);
   }
 }
