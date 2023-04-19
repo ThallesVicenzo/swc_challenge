@@ -30,4 +30,11 @@ class FirebaseRepository {
       String collection, String doc, String? date) async {
     await FirebaseService.setDocumentCollectionData(collection, doc, date);
   }
+
+  static Future<QuerySnapshot<Map<String, dynamic>>> getDocumentCollectionData(
+      String collection, String doc, String? date) async {
+    final data =
+        await FirebaseService.getDocumentCollectionData(collection, doc, date);
+    return data;
+  }
 }
