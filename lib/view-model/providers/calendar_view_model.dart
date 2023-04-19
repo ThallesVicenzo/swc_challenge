@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:swc_challenge/view-model/repositories/firebase_repository.dart';
 
@@ -21,5 +22,12 @@ class CalendarViewModel with ChangeNotifier {
   Future<void> setData(String collection, String doc, String? date) async {
     await FirebaseRepository.setDocumentCollectionData(collection, doc, date);
     notifyListeners();
+  }
+
+  Future<QuerySnapshot<Map<String, dynamic>>> getData(
+      String collection, String doc, String? date) async {
+    final data = await FirebaseRepository.getDocumentCollectionData(
+        collection, doc, date);
+    return data;
   }
 }
