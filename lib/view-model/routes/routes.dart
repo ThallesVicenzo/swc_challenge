@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swc_challenge/view/calendar.dart';
+import 'package:swc_challenge/view/calendar/calendar.dart';
 import 'package:swc_challenge/view/grill_rent/grill_rent_screen.dart';
 
 import '../../view/splash_screen.dart';
