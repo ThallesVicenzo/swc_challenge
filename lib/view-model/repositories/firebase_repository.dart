@@ -19,13 +19,6 @@ class FirebaseRepository {
     }
   }
 
-  // static Stream<QuerySnapshot<Map<String, dynamic>>> getRentDates(
-  //     String doc, DateTime selectedDate) {
-  //   final dates = _collectionReference.doc(doc).collection('dates').snapshots();
-
-  //   return dates;
-  // }
-
   static Future<void> setDocumentCollectionData(
       String collection, String doc, String? date) async {
     await FirebaseService.setDocumentCollectionData(collection, doc, date);
